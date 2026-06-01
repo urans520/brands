@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品品牌目录</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#f5f0ff 0%,#fdf2f8 50%,#ecfdf5 100%);min-height:100vh;color:#1a1a2e}
+.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);color:#fff;text-align:center;padding:48px 20px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px;animation:drift 20s linear infinite}
+@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(24px,24px)}}
+.hero h1{font-size:2rem;font-weight:800;letter-spacing:2px;position:relative;margin-bottom:8px}
+.hero p{font-size:.95rem;opacity:.85;position:relative}
+.hero .count{display:inline-block;margin-top:12px;padding:6px 20px;border-radius:20px;background:rgba(255,255,255,.15);font-size:.82rem;position:relative}
+.container{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+.search-wrap{display:flex;justify-content:center;margin-bottom:24px}
+.search-wrap input{width:100%;max-width:420px;padding:14px 20px 14px 48px;border-radius:28px;border:none;font-size:.92rem;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.06);background:#fff;transition:all .3s}
+.search-wrap input:focus{box-shadow:0 4px 32px rgba(124,58,237,.2)}
+.search-wrap{position:relative}
+.search-wrap .icon{position:absolute;left:calc(50% - 190px);top:50%;transform:translateY(-50%);font-size:1.1rem;z-index:1}@media(max-width:480px){.search-wrap .icon{left:16px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:#fff;border-radius:20px;padding:28px 24px;cursor:pointer;transition:all .25s;box-shadow:0 2px 12px rgba(0,0,0,.04);text-decoration:none;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7c3aed,#db2777);opacity:0;transition:opacity .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(124,58,237,.12)}
+.card:hover::after{opacity:1}
+.card .brand-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px;font-weight:700}
+.card .brand-name{font-size:1.05rem;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.card .brand-sub{font-size:.82rem;color:#999;margin-bottom:12px}
+.card .brand-link{font-size:.75rem;color:#7c3aed;display:flex;align-items:center;gap:4px;margin-top:auto}
+.card .brand-link span{font-size:.9rem}
+.colors{background:#ede9fe}.colors:nth-child(2n){background:#fce7f3}.colors:nth-child(3n){background:#d1fae5}.colors:nth-child(4n){background:#fef3c7}.colors:nth-child(5n){background:#dbeafe}
+.footer{text-align:center;padding:20px;color:#aaa;font-size:.78rem}
+@media(max-width:600px){.hero h1{font-size:1.5rem}.hero{padding:36px 16px 30px}.grid{grid-template-columns:1fr}.card{padding:22px 20px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>🛍️ 产品品牌目录</h1>
+<p>点击品牌卡片直达产品文档</p>
+<div class="count">14 个品牌</div>
+</div>
+
+<div class="container">
+<div class="search-wrap">
+<span class="icon">🔍</span>
+<input id="search" placeholder="搜索品牌..." oninput="filter()">
+</div>
+<div class="grid" id="grid"></div>
+<div id="empty" style="display:none;text-align:center;padding:40px;color:#999;font-size:1.1rem">没有匹配的品牌</div>
+</div>
+
+<div class="footer">点击跳转金山文档 · 持续更新中</div>
+
+<script>
+var brands=[
+{n:"BIODE RUO 贝德洛",s:"萌趣童心",u:"https://www.kdocs.cn/l/cfNZcbf2lPeu",c:"#fef3c7",e:"🌿"},
+{n:"时刻芭莎 it's for you",s:"高定美妆工具",u:"https://www.kdocs.cn/l/cbEu2ABZ62cl",c:"#fce7f3",e:"💋"},
+{n:"拉法自然",s:"甄致系列",u:"https://www.kdocs.cn/l/cdniGLK5aJsQ",c:"#d1fae5",e:"🌱"},
+{n:"NRCS 迷若初时",s:"高定美妆工具",u:"https://www.kdocs.cn/l/cclwIhD4Lhmd",c:"#ede9fe",e:"✨"},
+{n:"Rosekaev 露丝卡文",s:"时空奢品",u:"https://www.kdocs.cn/l/cqrULSyYAzjJ",c:"#fce7f3",e:"🌹"},
+{n:"然之迷",s:"轻奢生活",u:"https://www.kdocs.cn/l/cnssPpFdeRCK",c:"#dbeafe",e:"🌸"},
+{n:"贝德洛",s:"",u:"https://www.kdocs.cn/l/cajN7a6taEtO",c:"#fef3c7",e:"🎀"},
+{n:"拉法 - 毕加索",s:"",u:"https://www.kdocs.cn/l/cqNRCmRq6Bh3",c:"#ede9fe",e:"🎨"},
+{n:"萌呗比 MONKiDS",s:"",u:"https://www.kdocs.cn/l/ckJvvvuh6geZ",c:"#d1fae5",e:"🐻"},
+{n:"女人传说",s:"英伦风",u:"https://www.kdocs.cn/l/cvOorl9vSLv6",c:"#fce7f3",e:"🇬🇧"},
+{n:"女人传说",s:"W系列",u:"https://www.kdocs.cn/l/co2vOAFBBWjI",c:"#dbeafe",e:"💎"},
+{n:"女人传说",s:"日系小清新",u:"https://www.kdocs.cn/l/cutNGxU70LDT",c:"#d1fae5",e:"🍃"},
+{n:"拉法",s:"美妆工具",u:"https://www.kdocs.cn/l/crAxkpnd3r9r",c:"#fef3c7",e:"💅"},
+{n:"YOUSE",s:"",u:"https://www.kdocs.cn/l/cojJvCNZUI8X",c:"#ede9fe",e:"⚡"}
+];
+
+function render(list){
+var g=document.getElementById("grid");
+if(!list.length){g.innerHTML="";document.getElementById("empty").style.display="block";return}
+document.getElementById("empty").style.display="none";
+var h="";
+list.forEach(function(b,i){
+var cl="colors";
+h+='<a class="card '+cl+'" href="'+b.u+'" target="_blank" style="overflow:hidden">';
+h+='<div class="brand-icon" style="background:'+b.c+'">'+b.e+'</div>';
+h+='<div class="brand-name">'+b.n+'</div>';
+if(b.s)h+='<div class="brand-sub">'+b.s+'</div>';
+h+='<div class="brand-link"><span>→</span> 打开产品文档</div>';
+h+='</a>';
+});
+g.innerHTML=h;
+document.querySelector(".count").textContent=list.length+" 个品牌";
+}
+
+function filter(){
+var q=document.getElementById("search").value.toLowerCase();
+if(!q)render(brands);
+else render(brands.filter(function(b){return(b.n+" "+b.s).toLowerCase().indexOf(q)>=0}));
+}
+
+render(brands);
+</script>
+</body>
+</html>
