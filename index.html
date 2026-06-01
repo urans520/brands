@@ -6,24 +6,22 @@
 <title>乐莎品牌目录</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#f5f0ff 0%,#fdf2f8 50%,#ecfdf5 100%);min-height:100vh;color:#1a1a2e}
-.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);color:#dc2626;text-align:center;padding:48px 20px 40px;position:relative;overflow:hidden}
-.hero h1{font-size:2rem;font-weight:800;letter-spacing:2px;position:relative;z-index:1;margin-bottom:8px}
-.hero p{font-size:.95rem;opacity:.9;position:relative;z-index:1}
-.hero .count{display:inline-block;margin-top:12px;padding:6px 20px;border-radius:20px;background:rgba(255,255,255,.2);font-size:.82rem;position:relative;z-index:1}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#f5f0ff 0%,#fdf2f8 50%,#ecfdf5 100%);min-height:100vh;color:#1a1a2e}
+.hero{background:#ffffff;color:#ffffff;text-align:center;padding:48px 20px 40px;position:relative;overflow:hidden}
+.hero h1{font-size:2rem;font-weight:800;letter-spacing:2px;margin-bottom:8px}
+.hero p{font-size:.95rem;opacity:.9}
+.hero .count{display:none}
 .container{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
 .search-wrap{display:flex;justify-content:center;margin-bottom:24px;position:relative}
-.search-wrap input{width:100%;max-width:420px;padding:14px 20px 14px 48px;border-radius:28px;border:none;font-size:.92rem;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.06);background:#fff;transition:all .3s}
+.search-wrap input{width:100%;max-width:420px;padding:14px 20px 14px 48px;border-radius:28px;border:none;font-size:.92rem;outline:none;box-shadow:0 4px 24px rgba(0,0,0,.06);background:#fff}
 .search-wrap input:focus{box-shadow:0 4px 32px rgba(124,58,237,.2)}
-.search-wrap .icon{position:absolute;left:calc(50% - 190px);top:50%;transform:translateY(-50%);font-size:1.1rem;z-index:1}
+.search-wrap .icon{position:absolute;left:calc(50% - 190px);top:50%;transform:translateY(-50%);font-size:1.1rem}
 @media(max-width:480px){.search-wrap .icon{left:16px}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.card{background:#fff;border-radius:20px;padding:28px 24px;cursor:pointer;transition:all .25s;box-shadow:0 2px 12px rgba(0,0,0,.04);text-decoration:none;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7c3aed,#db2777);opacity:0;transition:opacity .25s}
+.card{border-radius:20px;padding:28px 24px;cursor:pointer;transition:all .25s;box-shadow:0 2px 12px rgba(0,0,0,.04);text-decoration:none;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(124,58,237,.12)}
-.card:hover::after{opacity:1}
-.brand-name{font-size:1.05rem;font-weight:700;color:#1a1a2e;margin-bottom:4px}
-.brand-sub{font-size:.82rem;color:#999;margin-bottom:12px}
+.brand-name{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.brand-sub{font-size:.82rem;opacity:.7;margin-bottom:12px}
 .brand-link{font-size:.75rem;color:#7c3aed;display:flex;align-items:center;gap:4px;margin-top:auto}
 .brand-link span{font-size:.9rem}
 .empty{text-align:center;padding:40px;color:#999;font-size:1.1rem}
@@ -33,9 +31,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
 </head>
 <body>
 <div class="hero">
-<h1>🛍️ 乐莎品牌目录</h1>
+<h1>乐莎品牌目录</h1>
 <p>点击品牌卡片直达产品文档</p>
-<div class="count" id="count">14 个品牌</div>
 </div>
 <div class="container">
 <div class="search-wrap">
@@ -47,29 +44,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
 </div>
 <div class="footer">点击跳转产品展示 · 持续更新中</div>
 <script>
-var brands=[{"id":1780293561267,"name":"BIODE RUO 贝德洛","subtitle":"萌趣童心","url":"https://www.kdocs.cn/l/cfNZcbf2lPeu","color":"#fef3c7","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561269,"name":"时刻芭莎 it's for you","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cbEu2ABZ62cl","color":"#fce7f3","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561270,"name":"拉法自然","subtitle":"甄致系列","url":"https://www.kdocs.cn/l/cdniGLK5aJsQ","color":"#d1fae5","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561271,"name":"NRCS 迷若初时","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cclwIhD4Lhmd","color":"#ede9fe","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561272,"name":"Rosekaev 露丝卡文","subtitle":"时空奢品","url":"https://www.kdocs.cn/l/cqrULSyYAzjJ","color":"#fce7f3","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561273,"name":"然之迷","subtitle":"轻奢生活","url":"https://www.kdocs.cn/l/cnssPpFdeRCK","color":"#dbeafe","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561274,"name":"贝德洛","subtitle":"","url":"https://www.kdocs.cn/l/cajN7a6taEtO","color":"#fef3c7","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561275,"name":"拉法 - 毕加索","subtitle":"","url":"https://www.kdocs.cn/l/cqNRCmRq6Bh3","color":"#ede9fe","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561276,"name":"萌呗比 MONKiDS","subtitle":"","url":"https://www.kdocs.cn/l/ckJvvvuh6geZ","color":"#d1fae5","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561277,"name":"女人传说","subtitle":"英伦风","url":"https://www.kdocs.cn/l/cvOorl9vSLv6","color":"#fce7f3","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561278,"name":"女人传说","subtitle":"W系列","url":"https://www.kdocs.cn/l/co2vOAFBBWjI","color":"#dbeafe","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561279,"name":"女人传说","subtitle":"日系小清新","url":"https://www.kdocs.cn/l/cutNGxU70LDT","color":"#d1fae5","bgOpacity":100,"textColor":"#dc2626"},{"id":1780293561280,"name":"YOUSE","subtitle":"","url":"https://www.kdocs.cn/l/cojJvCNZUI8X","color":"#ede9fe","bgOpacity":100,"textColor":"#dc2626"},{"id":1780296779252,"name":"拉法","subtitle":"拉法美妆","url":"https://www.kdocs.cn/l/crAxkpnd3r9r","color":"#ede9fe","bgOpacity":100,"textColor":"#dc2626"}];
-function render(list){
-var g=document.getElementById("grid");
-if(!list.length){g.innerHTML="";document.getElementById("empty").style.display="block";return}
-document.getElementById("empty").style.display="none";
-var h="";
-list.forEach(function(b){
-var bg=b.color||"#fee2e2";
-var tc=b.textColor||"#dc2626";
-h+='<a class="card" href="'+b.url+'" target="_blank" style="background:'+bg+'">';
-h+='<div class="brand-name" style="color:'+tc+'">'+b.name+'</div>';
-if(b.subtitle)h+='<div class="brand-sub" style="color:'+tc+';opacity:0.7">'+b.subtitle+'</div>';
-h+='<div class="brand-link"><span>→</span> 打开产品文档</div>';
-h+='</a>';
-});
-g.innerHTML=h;
-document.querySelector(".count").textContent=list.length+" 个品牌";
-}
-function filter(){
-var q=document.getElementById("search").value.toLowerCase();
-if(!q)render(brands);
-else render(brands.filter(function(b){return(b.name+" "+(b.subtitle||"")).toLowerCase().indexOf(q)>=0}));
-}
+var brands=[{"name":"BIODE RUO 贝德洛","subtitle":"萌趣童心","url":"https://www.kdocs.cn/l/cfNZcbf2lPeu","color":"#fef3c7","bgOpacity":60,"textColor":"#7c3aed"},{"name":"时刻芭莎 it's for you","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cbEu2ABZ62cl","color":"#fce7f3","bgOpacity":57,"textColor":"#7c3aed"},{"name":"拉法自然","subtitle":"甄致系列","url":"https://www.kdocs.cn/l/cdniGLK5aJsQ","color":"#d1fae5","bgOpacity":52,"textColor":"#7c3aed"},{"name":"NRCS 迷若初时","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cclwIhD4Lhmd","color":"#ede9fe","bgOpacity":51,"textColor":"#7c3aed"},{"name":"Rosekaev 露丝卡文","subtitle":"时空奢品","url":"https://www.kdocs.cn/l/cqrULSyYAzjJ","color":"#fce7f3","bgOpacity":53,"textColor":"#7c3aed"},{"name":"然之迷","subtitle":"轻奢生活","url":"https://www.kdocs.cn/l/cnssPpFdeRCK","color":"#dbeafe","bgOpacity":54,"textColor":"#7c3aed"},{"name":"贝德洛","subtitle":"","url":"https://www.kdocs.cn/l/cajN7a6taEtO","color":"#fef3c7","bgOpacity":55,"textColor":"#7c3aed"},{"name":"拉法 - 毕加索","subtitle":"","url":"https://www.kdocs.cn/l/cqNRCmRq6Bh3","color":"#ede9fe","bgOpacity":51,"textColor":"#7c3aed"},{"name":"萌呗比 MONKiDS","subtitle":"","url":"https://www.kdocs.cn/l/ckJvvvuh6geZ","color":"#d1fae5","bgOpacity":54,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"英伦风","url":"https://www.kdocs.cn/l/cvOorl9vSLv6","color":"#fce7f3","bgOpacity":48,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"W系列","url":"https://www.kdocs.cn/l/co2vOAFBBWjI","color":"#dbeafe","bgOpacity":56,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"日系小清新","url":"https://www.kdocs.cn/l/cutNGxU70LDT","color":"#d1fae5","bgOpacity":46,"textColor":"#7c3aed"},{"name":"YOUSE","subtitle":"","url":"https://www.kdocs.cn/l/cojJvCNZUI8X","color":"#ede9fe","bgOpacity":60,"textColor":"#7c3aed"},{"name":"拉法","subtitle":"拉法美妆","url":"https://www.kdocs.cn/l/crAxkpnd3r9r","color":"#ede9fe","bgOpacity":69,"textColor":"#7c3aed"}];
+function render(list){var g=document.getElementById("grid");if(!list.length){g.innerHTML="";document.getElementById("empty").style.display="block";return}document.getElementById("empty").style.display="none";var h="";list.forEach(function(b){var bg=b.color||"#fee2e2";var tc=b.textColor||"#dc2626";h+='<a class="card" href="'+b.url+'" target="_blank" style="background:'+bg+'"><div class="brand-name" style="color:'+tc+'">'+b.name+'</div>';if(b.subtitle)h+='<div class="brand-sub" style="color:'+tc+'">'+b.subtitle+'</div>';h+='</a>';});g.innerHTML=h;document.querySelector(".count").textContent=list.length+" 个品牌"}
+function filter(){var q=document.getElementById("search").value.toLowerCase();if(!q)render(brands);else render(brands.filter(function(b){return(b.name+" "+(b.subtitle||"")).toLowerCase().indexOf(q)>=0}))}
 render(brands);
 </script>
 </body>

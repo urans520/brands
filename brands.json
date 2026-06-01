@@ -7,10 +7,10 @@
     "color": "#fef3c7",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.267Z",
-    "updated_at": "2026-06-01T07:01:16.884Z",
-    "bgImage": "",
-    "bgOpacity": 100,
-    "textColor": "#dc2626"
+    "updated_at": "2026-06-01T09:21:20.476Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_62d7a7af84f21.jpg",
+    "bgOpacity": 60,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561269,
@@ -20,8 +20,10 @@
     "color": "#fce7f3",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.269Z",
-    "updated_at": "2026-06-01T06:34:14.502Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:32.308Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_66616fdbc702d.jpg",
+    "bgOpacity": 57,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561270,
@@ -31,8 +33,10 @@
     "color": "#d1fae5",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.270Z",
-    "updated_at": "2026-06-01T06:34:17.804Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:35.278Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5ff128118b975.jpg",
+    "bgOpacity": 52,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561271,
@@ -42,8 +46,10 @@
     "color": "#ede9fe",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.271Z",
-    "updated_at": "2026-06-01T06:34:21.637Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:22:08.077Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_663b293415fb9.jpg",
+    "bgOpacity": 51,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561272,
@@ -53,8 +59,10 @@
     "color": "#fce7f3",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.272Z",
-    "updated_at": "2026-06-01T06:34:19.797Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:37.837Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_672c83e3bac1c.jpg",
+    "bgOpacity": 53,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561273,
@@ -64,8 +72,10 @@
     "color": "#dbeafe",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.273Z",
-    "updated_at": "2026-06-01T06:34:48.587Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:40.285Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/62832f8991eff.jpg",
+    "bgOpacity": 54,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561274,
@@ -75,8 +85,10 @@
     "color": "#fef3c7",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.274Z",
-    "updated_at": "2026-06-01T06:34:50.821Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:43.117Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_61385607ad8ef.jpg",
+    "bgOpacity": 55,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561275,
@@ -86,8 +98,10 @@
     "color": "#ede9fe",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.275Z",
-    "updated_at": "2026-06-01T06:34:45.748Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:45.125Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_61382b8184817.jpg",
+    "bgOpacity": 51,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561276,
@@ -97,8 +111,10 @@
     "color": "#d1fae5",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.276Z",
-    "updated_at": "2026-06-01T06:34:43.700Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:54.837Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5cf6044ef174f.jpg",
+    "bgOpacity": 54,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561277,
@@ -108,8 +124,10 @@
     "color": "#fce7f3",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.277Z",
-    "updated_at": "2026-06-01T06:34:40.996Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:52.741Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5f03033dca58a.jpg",
+    "bgOpacity": 48,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561278,
@@ -119,7 +137,10 @@
     "color": "#dbeafe",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.278Z",
-    "updated_at": "2026-06-01T05:59:21.278Z"
+    "updated_at": "2026-06-01T09:21:50.174Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_642fb2bd3fde3.jpg",
+    "bgOpacity": 56,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561279,
@@ -129,8 +150,10 @@
     "color": "#d1fae5",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.279Z",
-    "updated_at": "2026-06-01T06:34:32.405Z",
-    "bgImage": ""
+    "updated_at": "2026-06-01T09:21:47.580Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_612c576746ec1.jpg",
+    "bgOpacity": 46,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780293561280,
@@ -140,9 +163,10 @@
     "color": "#ede9fe",
     "emoji": "💎",
     "created_at": "2026-06-01T05:59:21.280Z",
-    "updated_at": "2026-06-01T06:44:38.923Z",
-    "bgImage": "/uploads/logo-1780295753159-862186612.jpg",
-    "bgOpacity": 60
+    "updated_at": "2026-06-01T09:21:57.517Z",
+    "bgImage": "https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_5dbfcc49a4fa2.jpg",
+    "bgOpacity": 60,
+    "textColor": "#7c3aed"
   },
   {
     "id": 1780296779252,
@@ -153,6 +177,7 @@
     "color": "#ede9fe",
     "bgOpacity": 69,
     "created_at": "2026-06-01T06:52:59.252Z",
-    "updated_at": "2026-06-01T06:56:02.765Z"
+    "updated_at": "2026-06-01T09:22:04.037Z",
+    "textColor": "#7c3aed"
   }
 ]
