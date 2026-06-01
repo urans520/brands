@@ -7,8 +7,10 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#f5f0ff 0%,#fdf2f8 50%,#ecfdf5 100%);min-height:100vh;color:#1a1a2e}
-.hero{background:#ffffff;color:#ffffff;text-align:center;padding:48px 20px 40px;position:relative;overflow:hidden}
-.hero h1{font-size:2rem;font-weight:800;letter-spacing:2px;margin-bottom:8px}
+.hero{background:#ffffff;color:#dc2626;text-align:center;padding:48px 20px 40px;position:relative;overflow:hidden}
+.hero .logo-title{display:flex;align-items:center;justify-content:center;gap:12px}
+.hero .logo-title img{height:60px;width:auto}
+.hero h1{font-size:2rem;font-weight:800;letter-spacing:2px;margin-bottom:0}
 .hero p{font-size:.95rem;opacity:.9}
 .hero .count{display:none}
 .container{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
@@ -22,8 +24,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(124,58,237,.12)}
 .brand-name{font-size:1.05rem;font-weight:700;margin-bottom:4px}
 .brand-sub{font-size:.82rem;opacity:.7;margin-bottom:12px}
-.brand-link{font-size:.75rem;color:#7c3aed;display:flex;align-items:center;gap:4px;margin-top:auto}
-.brand-link span{font-size:.9rem}
 .empty{text-align:center;padding:40px;color:#999;font-size:1.1rem}
 .footer{text-align:center;padding:20px;color:#aaa;font-size:.78rem}
 @media(max-width:600px){.hero h1{font-size:1.5rem}.hero{padding:36px 16px 30px}.grid{grid-template-columns:1fr}.card{padding:22px 20px}}
@@ -31,7 +31,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 </head>
 <body>
 <div class="hero">
+<div class="logo-title">
+<img src="https://cdn.jsdelivr.net/gh/urans520/brands@main/images/lesha-logo.png" alt="乐莎">
 <h1>乐莎品牌目录</h1>
+</div>
 <p>点击品牌卡片直达产品文档</p>
 </div>
 <div class="container">
@@ -44,9 +47,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 </div>
 <div class="footer">点击跳转产品展示 · 持续更新中</div>
 <script>
-var brands=[{"name":"BIODE RUO 贝德洛","subtitle":"萌趣童心","url":"https://www.kdocs.cn/l/cfNZcbf2lPeu","color":"#fef3c7","bgOpacity":60,"textColor":"#7c3aed"},{"name":"时刻芭莎 it's for you","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cbEu2ABZ62cl","color":"#fce7f3","bgOpacity":57,"textColor":"#7c3aed"},{"name":"拉法自然","subtitle":"甄致系列","url":"https://www.kdocs.cn/l/cdniGLK5aJsQ","color":"#d1fae5","bgOpacity":52,"textColor":"#7c3aed"},{"name":"NRCS 迷若初时","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cclwIhD4Lhmd","color":"#ede9fe","bgOpacity":51,"textColor":"#7c3aed"},{"name":"Rosekaev 露丝卡文","subtitle":"时空奢品","url":"https://www.kdocs.cn/l/cqrULSyYAzjJ","color":"#fce7f3","bgOpacity":53,"textColor":"#7c3aed"},{"name":"然之迷","subtitle":"轻奢生活","url":"https://www.kdocs.cn/l/cnssPpFdeRCK","color":"#dbeafe","bgOpacity":54,"textColor":"#7c3aed"},{"name":"贝德洛","subtitle":"","url":"https://www.kdocs.cn/l/cajN7a6taEtO","color":"#fef3c7","bgOpacity":55,"textColor":"#7c3aed"},{"name":"拉法 - 毕加索","subtitle":"","url":"https://www.kdocs.cn/l/cqNRCmRq6Bh3","color":"#ede9fe","bgOpacity":51,"textColor":"#7c3aed"},{"name":"萌呗比 MONKiDS","subtitle":"","url":"https://www.kdocs.cn/l/ckJvvvuh6geZ","color":"#d1fae5","bgOpacity":54,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"英伦风","url":"https://www.kdocs.cn/l/cvOorl9vSLv6","color":"#fce7f3","bgOpacity":48,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"W系列","url":"https://www.kdocs.cn/l/co2vOAFBBWjI","color":"#dbeafe","bgOpacity":56,"textColor":"#7c3aed"},{"name":"女人传说","subtitle":"日系小清新","url":"https://www.kdocs.cn/l/cutNGxU70LDT","color":"#d1fae5","bgOpacity":46,"textColor":"#7c3aed"},{"name":"YOUSE","subtitle":"","url":"https://www.kdocs.cn/l/cojJvCNZUI8X","color":"#ede9fe","bgOpacity":60,"textColor":"#7c3aed"},{"name":"拉法","subtitle":"拉法美妆","url":"https://www.kdocs.cn/l/crAxkpnd3r9r","color":"#ede9fe","bgOpacity":69,"textColor":"#7c3aed"}];
-function render(list){var g=document.getElementById("grid");if(!list.length){g.innerHTML="";document.getElementById("empty").style.display="block";return}document.getElementById("empty").style.display="none";var h="";list.forEach(function(b){var bg=b.color||"#fee2e2";var tc=b.textColor||"#dc2626";h+='<a class="card" href="'+b.url+'" target="_blank" style="background:'+bg+'"><div class="brand-name" style="color:'+tc+'">'+b.name+'</div>';if(b.subtitle)h+='<div class="brand-sub" style="color:'+tc+'">'+b.subtitle+'</div>';h+='</a>';});g.innerHTML=h;document.querySelector(".count").textContent=list.length+" 个品牌"}
-function filter(){var q=document.getElementById("search").value.toLowerCase();if(!q)render(brands);else render(brands.filter(function(b){return(b.name+" "+(b.subtitle||"")).toLowerCase().indexOf(q)>=0}))}
+var brands=[
+{"name":"BIODE RUO 贝德洛","subtitle":"萌趣童心","url":"https://www.kdocs.cn/l/cfNZcbf2lPeu","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_62d7a7af84f21.jpg","bgOpacity":60},
+{"name":"时刻芭莎 it's for you","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cbEu2ABZ62cl","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_66616fdbc702d.jpg","bgOpacity":57},
+{"name":"拉法自然","subtitle":"甄致系列","url":"https://www.kdocs.cn/l/cdniGLK5aJsQ","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5ff128118b975.jpg","bgOpacity":52},
+{"name":"NRCS 迷若初时","subtitle":"高定美妆工具","url":"https://www.kdocs.cn/l/cclwIhD4Lhmd","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_663b293415fb9.jpg","bgOpacity":51},
+{"name":"Rosekaev 露丝卡文","subtitle":"时空奢品","url":"https://www.kdocs.cn/l/cqrULSyYAzjJ","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_672c83e3bac1c.jpg","bgOpacity":53},
+{"name":"然之迷","subtitle":"轻奢生活","url":"https://www.kdocs.cn/l/cnssPpFdeRCK","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/62832f8991eff.jpg","bgOpacity":54},
+{"name":"贝德洛","subtitle":"","url":"https://www.kdocs.cn/l/cajN7a6taEtO","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_61385607ad8ef.jpg","bgOpacity":55},
+{"name":"拉法 - 毕加索","subtitle":"","url":"https://www.kdocs.cn/l/cqNRCmRq6Bh3","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_61382b8184817.jpg","bgOpacity":51},
+{"name":"萌呗比 MONKiDS","subtitle":"","url":"https://www.kdocs.cn/l/ckJvvvuh6geZ","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5cf6044ef174f.jpg","bgOpacity":54},
+{"name":"女人传说","subtitle":"英伦风","url":"https://www.kdocs.cn/l/cvOorl9vSLv6","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/5f03033dca58a.jpg","bgOpacity":48},
+{"name":"女人传说","subtitle":"W系列","url":"https://www.kdocs.cn/l/co2vOAFBBWjI","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_642fb2bd3fde3.jpg","bgOpacity":56},
+{"name":"女人传说","subtitle":"日系小清新","url":"https://www.kdocs.cn/l/cutNGxU70LDT","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_612c576746ec1.jpg","bgOpacity":46},
+{"name":"YOUSE","subtitle":"","url":"https://www.kdocs.cn/l/cojJvCNZUI8X","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/thumb_5dbfcc49a4fa2.jpg","bgOpacity":60},
+{"name":"拉法","subtitle":"拉法美妆","url":"https://www.kdocs.cn/l/crAxkpnd3r9r","bgImage":"https://cdn.jsdelivr.net/gh/urans520/brands@main/images/ScreenShot_2026-05-13_103541_635.jpg","bgOpacity":69}
+];
+function render(list){
+var g=document.getElementById("grid");
+if(!list.length){g.innerHTML="";document.getElementById("empty").style.display="block";return}
+document.getElementById("empty").style.display="none";
+var h="";
+list.forEach(function(b){
+var opacity=(b.bgOpacity||100)/100;
+var tc="#7c3aed";
+if(b.bgImage){
+var overlayOpacity=1-opacity;
+h+='<a class="card" href="'+b.url+'" target="_blank" style="overflow:hidden;background:url(\''+b.bgImage+'\') center/cover no-repeat;position:relative;">';
+h+='<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,'+overlayOpacity+');z-index:0;"></div>';
+h+='<div style="position:relative;z-index:1;">';
+h+='<div class="brand-name" style="color:'+tc+'">'+b.name+'</div>';
+if(b.subtitle)h+='<div class="brand-sub" style="color:'+tc+'">'+b.subtitle+'</div>';
+h+='</div>';
+h+='</a>';
+}
+});
+g.innerHTML=h;
+}
+function filter(){
+var q=document.getElementById("search").value.toLowerCase();
+if(!q)render(brands);
+else render(brands.filter(function(b){return(b.name+" "+(b.subtitle||"")).toLowerCase().indexOf(q)>=0}));
+}
 render(brands);
 </script>
 </body>
